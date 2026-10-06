@@ -50,9 +50,9 @@ jobs:
           echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  gl.tgz" | sha256sum -c -
           tar xzf gl.tgz gitleaks && rm gl.tgz
           if [ -n "$BASE" ]; then
-            ./gitleaks git --redact --no-banner --log-opts="$BASE..HEAD" .
+            ./gitleaks git --config .lab-checks/.gitleaks.toml --redact -v --no-banner --log-opts="$BASE..HEAD" .
           else
-            ./gitleaks git --redact --no-banner .
+            ./gitleaks git --config .lab-checks/.gitleaks.toml --redact -v --no-banner .
           fi
 
       - name: Large files and notebook outputs

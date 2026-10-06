@@ -47,16 +47,16 @@ def main():
         size = os.path.getsize(f)
         if size > limit:
             fails += 1
-            print(f"::error file={f}::File is {size / 1048576:.1f} MB, above the {a.max_mb:g} MB limit. "
+            print(f"::error file={f}::{f}: file is {size / 1048576:.1f} MB, above the {a.max_mb:g} MB limit. "
                   "Keep data and large outputs out of git (use a data folder that git ignores, or a release asset).")
         if f.endswith(".ipynb"):
             n = notebook_outputs(f)
             if n and size > a.notebook_mb * 1024 * 1024:
                 fails += 1
-                print(f"::error file={f}::Notebook is {size / 1048576:.1f} MB with {n} output cells, above the "
+                print(f"::error file={f}::{f}: notebook is {size / 1048576:.1f} MB with {n} output cells, above the "
                       f"{a.notebook_mb:g} MB notebook limit. Save large figures as files and clear the heavy outputs.")
             elif n:
-                print(f"::warning file={f}::{n} code cells keep their outputs ({size / 1048576:.1f} MB). "
+                print(f"::warning file={f}::{f}: {n} code cells keep their outputs ({size / 1048576:.1f} MB). "
                       "This is allowed for a run record. Clear them if they are not needed.")
     scope = f"changed since {a.base[:7]}" if a.base else "tracked"
     print(f"lab_checks: {len(files)} {scope} files, {fails} findings")

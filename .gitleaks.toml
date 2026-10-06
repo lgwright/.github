@@ -1,0 +1,10 @@
+# gitleaks settings for LGW Lab repositories: the default rules, plus one exception.
+[extend]
+useDefault = true
+
+# Conda environment files pin packages as name=version=build (asttokens=2.4.1=pyhd8ed1ab_0).
+# The build string looks like a key to the generic rule but is not a secret.
+[[allowlists]]
+description = "conda package pins"
+regexTarget = "line"
+regexes = ['''^\s*-\s*[A-Za-z0-9_.\-]+=[A-Za-z0-9_.+\-]+=[A-Za-z0-9_.+\-]+\s*$''']
