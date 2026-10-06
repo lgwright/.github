@@ -1,0 +1,19 @@
+# Runs the shared LGW Lab checks: secrets, large files, notebook outputs and
+# writing (advisory). The checks live in github.com/lgwright/.github.
+name: lab-checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      full_scan:
+        description: Check the whole history and every tracked file
+        type: boolean
+        default: true
+
+jobs:
+  checks:
+    uses: lgwright/.github/.github/workflows/lab-checks.yml@main
+    with:
+      full_scan: ${{ inputs.full_scan == true }}

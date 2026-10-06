@@ -1,0 +1,45 @@
+{
+  "_about": "Word lists for stecheck.py. jargon: a word with no single meaning in Simplified Technical English (STE), with the word to use and the other forms that also match. A lowercase-only entry has case_sensitive true, so the capital abbreviation (LO, PSD) goes to the abbreviation check. abbreviations: capital tokens that need no definition (units, standard computing terms, emphasis words). stative: past participles that describe a device state after is or are, so the passive check accepts them.",
+  "jargon": {
+    "ack": {"use": "acknowledge, or confirm", "forms": ["acks", "acked", "acking"]},
+    "pin": {"use": "hold at a value, or fix", "forms": ["pins", "pinned", "pinning"]},
+    "park": {"use": "stop and hold, or pause", "forms": ["parks", "parked", "parking"]},
+    "ref": {"use": "reference", "forms": ["refs"]},
+    "lo": {"use": "local oscillator (LO)", "case_sensitive": true},
+    "dz": {"use": "dead zone", "case_sensitive": true},
+    "psd": {"use": "power spectral density (PSD)", "case_sensitive": true},
+    "cal": {"use": "calibration, or calibrate", "case_sensitive": true, "forms": ["cals"]},
+    "polcal": {"use": "polarization calibration", "forms": ["polcals"]},
+    "recal": {"use": "calibrate again", "forms": ["recals"]},
+    "tbd": {"use": "not known yet (say who decides and when)"},
+    "etc.": {"use": "list all the items"},
+    "ok": {"use": "correct, or satisfactory", "forms": ["okay", "ok?"]},
+    "gonna": {"use": "will"},
+    "wanna": {"use": "want to"},
+    "utilize": {"use": "use", "forms": ["utilizes", "utilized", "utilizing", "utilise", "utilises", "utilised", "utilising"]},
+    "leverage": {"use": "use", "forms": ["leverages", "leveraged", "leveraging"]},
+    "via": {"use": "through, or with"},
+    "aforementioned": {"use": "this, or that"},
+    "e.g.": {"use": "for example"},
+    "i.e.": {"use": "that is"},
+    "w/": {"use": "with"},
+    "w/o": {"use": "without"},
+    "aka": {"use": "also called"},
+    "wrt": {"use": "relative to"},
+    "in order to": {"use": "to"}
+  },
+  "abbreviations": [
+    "dB", "dBm", "dBc", "Hz", "kHz", "MHz", "GHz", "THz", "mV", "uV", "kV", "mA", "uA", "mW", "uW", "kW", "nm", "um", "mm", "cm", "ms", "us", "ns", "ps", "fs",
+    "ADC", "DAC", "FPGA", "GPU", "CPU", "RAM", "USB", "PC", "PCs", "SSH", "SSD", "OS", "API", "CLI", "GUI", "JSON", "CSV", "PDF", "PNG", "SVG", "HTML", "URL", "UTF", "ASCII", "ID", "IDs", "HTTP", "HTTPS", "TCP", "UDP", "IP", "DNS", "DC", "AC", "RF", "FFT", "RMS", "UTC", "AM", "PM", "UI",
+    "AGENTS", "LOG", "README", "TODO", "STE", "ASD", "STE100", "WSL", "PID", "CUDA", "AICR", "YCRC", "SDK", "LaTeX", "TeX", "GB", "MB", "KB", "TB",
+    "NOT", "NO", "NEVER", "ALWAYS", "ONLY", "MUST", "AND", "OR", "ALL", "ANY", "IF", "THE", "DO", "ONE", "OFF", "ON",
+    "II", "III", "IV", "VI", "VII", "VIII", "IX", "XI", "XII",
+    "PATH", "FILE", "DIR", "REV", "NAME", "ARGS", "KEY", "VALUE", "CMD", "HOST", "URL", "TEXT"
+  ],
+  "stative": [
+    "connected", "disconnected", "attached", "detached", "located", "closed", "locked", "unlocked", "engaged", "disengaged",
+    "enabled", "disabled", "installed", "mounted", "aligned", "misaligned", "blocked", "unblocked", "saturated", "damaged",
+    "powered", "unpowered", "loaded", "unloaded", "armed", "disarmed", "stuck", "frozen", "tracked", "untracked", "staged",
+    "unstaged", "clean", "dirty", "required", "allowed", "exempt", "done"
+  ]
+}
